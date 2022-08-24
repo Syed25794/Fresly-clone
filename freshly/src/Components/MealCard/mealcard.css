@@ -1,0 +1,33 @@
+.mCard{
+    height: 380px;
+    margin: auto;
+}
+.proImg{
+    border-radius: 10px;
+    height: 100%;
+}
+.imgDiv{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 70%;
+}
+.mCard:hover{
+    cursor: pointer;
+}
+.proImg:hover{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.2);
+    transition: transform .9s;
+}
+.proHead{
+    font-weight: bold;
+    text-align: left;
+    line-height: 250%;
+}
+.proDes{
+    text-align: left;
+    color: rgb(98, 98, 98);
+    font-size: small;
+    font-weight: bold;
+}
