@@ -1,0 +1,22 @@
+.firstPara{
+  width: 55%;
+  text-align: center;
+  margin: auto;
+}
+.bold{
+  font-weight: bold;
+}
+.blue{
+  color: blue;
+  text-decoration: underline;
+}
+.category{
+  display: flex;
+  width: 25%;
+  margin: auto;
+  margin-top: 30px;
+}
+.categoryP{
+  color: gray;
+  font-weight: bold;
+}
