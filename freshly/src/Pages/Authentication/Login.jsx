@@ -1,4 +1,6 @@
 import React from "react";
+import MenuSharpIcon from "@mui/icons-material/MenuSharp";
+import { Link } from "react-router-dom";
 import {
   Box,
   Button,
@@ -6,13 +8,35 @@ import {
   Flex,
   FormLabel,
   Heading,
+  Image,
   Input,
   Text,
 } from "@chakra-ui/react";
 function Login() {
   return (
-    <Container border="2px solid red" maxWidth="100%">
-      <Box w={["95%", "95%", "60%", "35%"]} m="auto" mt="25vh" h="50vh">
+    <Container maxWidth="100%">
+      <Flex h="10vh" alignItems={"center"}>
+        <MenuSharpIcon />
+        <Image
+          src="https://www.shorenewsnetwork.com/wp-content/uploads/2022/05/freshly-and-asics-join-forces-to-release-limited-edition-meal-plans-for-runners_62962fa4cc112.jpeg"
+          w="110px"
+          m="auto"
+          mt="10px"
+        />
+        <Link to="/signup">
+          <Button
+            bg="rgb(42,109,255)"
+            h="30px"
+            color="white"
+            colorScheme="messenger"
+            rounded="none"
+            fontWeight="500"
+          >
+            Sign Up
+          </Button>
+        </Link>
+      </Flex>
+      <Box w={["95%", "95%", "60%", "35%"]} m="auto" mt="5vh" h="50vh">
         <Heading fontSize="40px" fontWeight="500">
           Log in
         </Heading>
@@ -22,7 +46,7 @@ function Login() {
             placeholder="you@domain.com"
             border="2px solid"
             borderColor="black"
-            rounded="sm"
+            rounded="none"
           />
           <FormLabel mb="0px" pt="15px">
             Password
@@ -31,7 +55,7 @@ function Login() {
             placeholder="enter password"
             border="2px solid"
             borderColor="black"
-            rounded="sm"
+            rounded="none"
             mt="0px"
           />
           <Button
@@ -40,7 +64,7 @@ function Login() {
             color="white"
             fontWeight="bold"
             w="100%"
-            rounded="sm"
+            rounded="none"
             mt="15px"
             colorScheme={"messenger"}
           >
@@ -48,10 +72,18 @@ function Login() {
           </Button>
         </form>
 
-        <Flex mt="20px" justifyContent="space-between">
-          <Text>forgot password</Text>
+        <Flex
+          mt="20px"
+          justifyContent="space-between"
+          direction={["column", "column", "row", "row"]}
+        >
+          <Text color="blue">forgot password</Text>
+
           <Text>
-            Don't have an account? <span>Get Started</span>
+            Don't have an account?{" "}
+            <span style={{ color: "blue " }}>
+              <Link to="/signup">Get Started</Link>
+            </span>
           </Text>
         </Flex>
       </Box>
