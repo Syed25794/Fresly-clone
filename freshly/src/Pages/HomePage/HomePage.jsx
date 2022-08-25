@@ -13,8 +13,8 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <>
-      <SimpleGrid columns={[1, null, 2]} mt="65px">
+    <div>
+      <SimpleGrid columns={[1, null, 2]}>
         <Box>
           <Image
             src="https://uploads-ssl.webflow.com/5d03b4e130118314af624b20/62aa50d46eadd67c1b7ca2df_Freshly_SpringMarketing_C141139-Edit%20(1)%20(2).jpg"
@@ -262,7 +262,7 @@ const HomePage = () => {
           </Box>
         </SimpleGrid>
       </Box>
-    </>
+    </div>
   );
 };
 

@@ -31,3 +31,52 @@
     font-size: small;
     font-weight: bold;
 }
+.soy{
+    background-color: rgb(177, 255, 255);
+    border-radius: 10px;
+    font-size: small;
+    padding: 3px 4px;
+}
+.img1{
+    width: 100%;
+}
+.img2{
+    width: 100%;
+}
+.modalHead{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding-bottom: 5px;
+}
+.modalBody{
+    overflow: scroll;
+    height: 600px;
+}
+.boxShadow{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.smHead{
+    font-weight: bold;
+}
+.smPara{
+    font-size: small;
+}
+.smPara2{
+    font-size: small;
+    text-align: center;
+}
+.smHead2{
+    color:blue;
+    text-align: center;
+    font-weight: bold;
+}
+.smbox{
+    border: 0.5px solid rgb(200, 200, 200);
+}
+.lp{
+    font-size:x-large;
+    font-weight: bold;
+    color: gray;
+}
