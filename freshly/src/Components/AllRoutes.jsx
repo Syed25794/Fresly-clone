@@ -5,8 +5,9 @@ import SignUp from "../Pages/Authentication/SignUp";
 import Cart from "../Pages/Cart/Cart";
 import Checkout from "../Pages/Checkout/Checkout";
 import DateDeliver from "../Pages/DateDelivery/DateDeliver";
-import Plans from "../Pages/Plans/Plans"
-import HomePage from "./HomePage/HomePage";
+import HomePage from "../Pages/HomePage/HomePage";
+import Plans from "../Pages/Plans/Plans.jsx"
+
 
 
 
