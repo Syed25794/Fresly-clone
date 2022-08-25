@@ -32,8 +32,8 @@ export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <>
-            <Box bg={useColorModeValue("rgb(255,253,247)")} px={4} position="fixed" w="100%" mt="-65px">
+        <div style={{"z-index":"1", position :"sticky", top :"0"}}>
+            <Box bg={useColorModeValue("rgb(255,253,247)")} px={4} w="100%">
                 <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                     <IconButton
                         size={"md"}
@@ -86,6 +86,6 @@ export default function Navbar() {
                     </Box>
                 ) : null}
             </Box>
-        </>
+        </div>
     );
 }
