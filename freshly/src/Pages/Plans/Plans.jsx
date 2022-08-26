@@ -8,8 +8,9 @@ import axios from 'axios';
 
 const Plans = () => {
   const [data,setData] = useState([]);
+  const [category,setCategory] = useState("");
   const getData=()=>{
-    axios.get("https://punchy-car-5123.herokuapp.com/foods")
+    axios.get(`https://punchy-car-5123.herokuapp.com/foods/?q=${category}`)
     .then(r=>{
       setData(r.data);
     })
@@ -17,14 +18,21 @@ const Plans = () => {
   }
   useEffect(()=>{
     getData()
-  },[]);
-  console.log(data)
+  },[category]);
+  
+
+  const handleChange=(e)=>{
+        setCategory(e.target.value);
+  }
+  console.log(category);
+
+  // console.log(data)
   return (
-    <div mt="65px">
+    <div mt="65px" style={{width:"98%"}}>
       <Image src="https://assets-global.website-files.com/5d03b4e130118314af624b20/6192ce7669f68694a8b969af_Group%20(8).svg" alt="" margin="auto"/>
       <Heading>Flexible plans that fit your life</Heading>
       <p className='firstPara'>We offer anywhere from 4–12 meals per week, with meals as low as <span className='bold'>$9.58 each. The bigger your box, the more you’ll save</span>—and you can always pause or change your plan at any time.</p>
-      <Box width="95%" margin="auto" mt="50" _hover={{cursor:"pointer"}}><Flex gap="4" >
+      <Box width="95%" margin="auto" mt="50" _hover={{cursor:"pointer"}}><Flex gap="4" flexWrap={{md:"nowrap",base:"wrap"}}>
         <Box>
           <Image src='https://assets-global.website-files.com/5d03b4e130118314af624b20/62fb492937b0377ca6310cb0_4-5%20Meals-p-500.png'/>
           <Text fontSize="3xl" as="b" color="teal">4-5 Meals</Text>
@@ -52,17 +60,17 @@ const Plans = () => {
       <p className='firstPara'>Whatever your lifestyle, Freshly’s got you covered—with <span className='blue'>gluten-free , dairy-free , plant-based , carb-smart</span>, and <span className='blue'>calorie-conscious</span> meal options! Our heat-&-eat breakfasts, low-lift lunches, and done-for-you dinners provide an effortless alternative to everyday cooking, with nutritious prepared meals delivered fresh to your door. Explore this week’s dishes and start eating better:</p>
       <div className='category'>
         <p className='categoryP'>Menu category:</p>
-        <select>
-          <option value="">All Meals</option>
-          <option value="">Purely Plant</option>
-          <option value="">Signature Collection</option>
-          <option value="">FreshlyFit</option>
-          <option value="">Protiens & Sides</option>
+        <select onChange={handleChange}>
+          <option value="" className='opt'>All Meals</option>
+          <option value="PurePlant" className='opt'>Purely Plant</option>
+          <option value="SignatureCollection" className='opt'>Signature Collection</option>
+          <option value="FreshlyFitted" className='opt'>FreshlyFit</option>
+          <option value="ProteinSides" className='opt'>Protiens & Sides</option>
         </select>
       </div>
 
       {/* Product Details */}
-      <SimpleGrid columns={4} spacing={5} width="95%" margin="auto" mt="50">
+      <SimpleGrid columns={{md : 4, sm : 1}} spacing={5} width="95%" margin="auto" mt="50">
         {data.map((item)=>(
           <MealCard item={item} key={item.id}/>
         ))}
