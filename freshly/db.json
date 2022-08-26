@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "nani",
+      "email": "nani@gmail.com",
+      "pwd": "nani123",
+      "id": 1
+    },
+    {
+      "name": "mahi",
+      "email": "mahi@gmail.com",
+      "pwd": "mahi123",
+      "id": 2
+    },
+    {
+      "name": "mahi",
+      "email": "mahi@gmail.com",
+      "pwd": "mahi123",
+      "id": 3
+    },
+    {
+      "name": "mahi",
+      "email": "mahi@gmail",
+      "pwd": "mahi123",
+      "id": 4
+    }
+  ]
+}
