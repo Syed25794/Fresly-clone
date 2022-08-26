@@ -56,7 +56,9 @@ export default function Navbar() {
                         <Text>How it Works</Text>
                         <Text>Gifts</Text>
                         <Text>Refer a Friend</Text>
-                        <Text>Help</Text>
+                        <Text>
+                            <Link to="/help">Help</Link>
+                        </Text>
                     </HStack>
                     <Flex gap="5" alignItems={"center"}>
                         <Text>

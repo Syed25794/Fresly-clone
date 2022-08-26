@@ -7,11 +7,12 @@ import reportWebVitals from './reportWebVitals';
 // import {store} from "./Redux/store";
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter } from "react-router-dom";
+import theme from './Theme/theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     {/* <Provider store={store}> */}
       <App />
     {/* </Provider> */}
