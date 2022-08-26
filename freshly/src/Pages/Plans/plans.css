@@ -20,3 +20,14 @@
   color: gray;
   font-weight: bold;
 }
+@media screen and (max-width: 480px) {
+  .firstPara{
+   width: 98%;
+  }
+  .category{
+   width: 100%;
+  }
+  .opt{
+    position: inherit;
+  }
+}
