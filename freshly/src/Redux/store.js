@@ -5,11 +5,13 @@ import {
   compose,
 } from "redux";
 import thunk from "redux-thunk";
+import { reducer } from "./Auth/reducer";
 
-const composeEnhancer =
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__ || compose();
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION__ || compose();
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  Auth: reducer,
+});
 const store = legacy_createStore(
   rootReducer,
   composeEnhancer(applyMiddleware(thunk))
