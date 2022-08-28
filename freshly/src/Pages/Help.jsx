@@ -1,9 +1,11 @@
 import { Box, Image, Input, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
+import Navbar from "../Components/Navbar";
 
 const Help = () => {
     return (
         <>
+        <Navbar/>
             <Box className="container" mt="65px">
                 <Image
                     src="https://theme.zdassets.com/theme_assets/1612443/d214b970a5c2a51ac648138ebda4c206924c9dd7.jpg"
@@ -31,7 +33,7 @@ const Help = () => {
                 </SimpleGrid>
             </Box>
 
-            <Box w="80%" m="auto" mt="20" mb="20">
+            <Box w="80%" m="auto" mt="20" mb="20" textAlign="left">
                 <Text textStyle="h3">Promoted articles</Text>
                 <SimpleGrid columns={[1, null, 3]} spacing="40px">
                     <Box borderBottom="1px solid rgb(175,175,175)" h="30px">

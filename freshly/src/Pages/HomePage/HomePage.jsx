@@ -16,7 +16,7 @@ import Footer from "../../Components/Footer";
 const HomePage = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <SimpleGrid columns={[1, null, 2]} mt="65px">
         <Box>
           <Image
@@ -116,24 +116,20 @@ const HomePage = () => {
         </SimpleGrid>
       </Box>
 
-      <Box w="100%" boxSizing="content-box" className="container">
-        <Image
-          src="https://assets-global.website-files.com/5d03b4e130118314af624b20/61f127577dd58a9659fa4545_22_Homepage_OntheMenu_BG_1440%20x%20890.jpg"
-          alt=""
-        />
-
-        <Box className="centered" bg="white" padding="10">
-          <Heading textAlign="left" color="black">
-            On the menu
+      <Box>
+        <Box bg="white" w="80%" margin="auto" padding="10" mt="10">
+          <Heading textAlign="center" color="black">
+            On The Menu
           </Heading>
-          <Text textAlign="left" color="black" mt="3">
+          <Text textAlign="center" color="black" mt="3">
             Each Freshly meal is perfectly sized for 1 person to enjoy at 1
             sitting. Our fully-prepared meals are delivered fresh, and ready to
             eat in 3 minutes.
           </Text>
-          <SimpleGrid columns={[1, null, 3]} spacing="20px" mt="8">
+          <SimpleGrid columns={[1, null, 3]} spacing="30px" mt="8">
             <Box>
               <Image
+                borderRadius="10"
                 src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/61063fef3319dbcfa7088dc3_production-meal-image-29fee2e7-8e88-4cd3-aad9-0e7d25671f7f.jpeg"
                 alt=""
               />
@@ -142,6 +138,7 @@ const HomePage = () => {
             </Box>
             <Box>
               <Image
+                borderRadius="10"
                 src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/61ff6b8686c6708c070e7d41_production-meal-image-e4122aa8-0fe7-4854-b6f5-e27e0c5be918.jpeg"
                 alt=""
               />
@@ -153,6 +150,7 @@ const HomePage = () => {
             </Box>
             <Box>
               <Image
+                borderRadius="10"
                 src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/61ff6b89b735739065897a4f_production-meal-image-c9eef45a-97a9-487c-9550-71488e5f639a.jpeg"
                 alt=""
               />
@@ -161,6 +159,7 @@ const HomePage = () => {
             </Box>
             <Box>
               <Image
+                borderRadius="10"
                 src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/61ff6b8bdf3b65081fd159c6_production-meal-image-f0de55be-d691-4ade-bc26-b4a8aedaa1fe.jpeg"
                 alt=""
               />
@@ -169,6 +168,7 @@ const HomePage = () => {
             </Box>
             <Box>
               <Image
+                borderRadius="10"
                 src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/61ff6b8e6dd23b60cb122654_production-meal-image-92ec0fc1-d352-4720-9b83-96798ab8d2de.jpeg"
                 alt=""
               />
@@ -177,6 +177,7 @@ const HomePage = () => {
             </Box>
             <Box>
               <Image
+                borderRadius="10"
                 src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/610640046931cb5d54bd5472_production-meal-image-7a62bb89-9bcb-4f1f-9f0f-d8372698d48e.jpeg"
                 alt=""
               />
@@ -184,7 +185,7 @@ const HomePage = () => {
               <Text textStyle="h5">410 Cal | Gluten Free | Single-Serve</Text>
             </Box>
           </SimpleGrid>
-          <Button mt="10" colorScheme="blue" w="100%" borderRadius="none">
+          <Button mt="10" colorScheme="blue" borderRadius="none">
             View Plans & Menu
           </Button>
         </Box>
@@ -307,7 +308,7 @@ const HomePage = () => {
       </Box>
 
       <Box>
-        <SimpleGrid columns={[1, null, 2]} alignItems="center">
+        <SimpleGrid columns={[1, null, 2]} alignItems="center" textAlign="left">
           <Box padding="20">
             <Heading>
               We believe eating right should be easy for everyone.
@@ -330,7 +331,7 @@ const HomePage = () => {
         </SimpleGrid>
       </Box>
 
-      <SimpleGrid columns={[1, null, 2]} mt="30">
+      <SimpleGrid columns={[1, null, 2]} mt="30" textAlign="left">
         <Box padding="20">
           <Heading>Healthy Meals Delivered Weekly</Heading>
           <Input mt="5" placeholder="freshly@freshly.com" />
@@ -403,7 +404,7 @@ const HomePage = () => {
           </Box>
         </SimpleGrid>
       </Box>
-      <Footer/>
+      <Footer />
     </>
   );
 };
