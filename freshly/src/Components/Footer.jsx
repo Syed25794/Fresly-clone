@@ -16,6 +16,7 @@ const Footer = () => {
     return (
         <>
             <Box
+            
                 bg={useColorModeValue('gray.50', 'gray.900')}
                 color={useColorModeValue('gray.700', 'gray.200')}>
                 <Container as={Stack} maxW={'6xl'} py={10}>
@@ -26,7 +27,7 @@ const Footer = () => {
                             <Box>
                                 <Image w="120px" src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5fc4feea074f5b86a6c62285_freshly-logo-R.svg" alt="" />
                             </Box>
-                            <Text fontSize={'sm'}>
+                            <Text textAlign="left" fontSize={'sm'}>
                                 © Freshly Inc.
                             </Text>
                         </Stack>

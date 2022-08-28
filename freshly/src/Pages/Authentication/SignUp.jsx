@@ -12,6 +12,8 @@ import { Alert, AlertIcon } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -37,7 +39,11 @@ function SignUp() {
     // checking the feilds are filled or not if feild are filled then post in to the database
     if (name !== "" || email !== "" || pwd !== "") {
       axios
-        .post("http://localhost:8080/users", { name, email, pwd })
+        .post("https://punchy-car-5123.herokuapp.com/users", {
+          name,
+          email,
+          pwd,
+        })
         .then((res) => res.data)
         .catch((err) => err.message);
       setStatus(true);
@@ -47,6 +53,7 @@ function SignUp() {
 
   return (
     <Container maxWidth="100%">
+      <Navbar />
       <Box w={["95%", "95%", "60%", "35%"]} m="auto" mt="5vh" h="50vh">
         <Heading fontSize="40px" fontWeight="500">
           Sign Up
@@ -109,6 +116,7 @@ function SignUp() {
           </Button>
         </form>
       </Box>
+      
     </Container>
   );
 }

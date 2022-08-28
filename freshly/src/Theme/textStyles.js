@@ -82,7 +82,8 @@ export const textStyles = {
       fontSize:"16px",
       fontWeight:"bold",
       color:"black",
-      textAlign:"left"
+      textAlign:"left",
+      mt:"3"
     },
   
     h5:{

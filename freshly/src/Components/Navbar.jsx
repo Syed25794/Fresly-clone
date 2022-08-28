@@ -45,11 +45,13 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <Box>
-            <Image
-              w="110px"
-              src="https://i.pcmag.com/imagery/reviews/03ma1UjS5TueJFtNVB4ElDn-8.fit_scale.size_1028x578.v1649255757.png"
-              alt="logo"
-            />
+            <Link to="/">
+              <Image
+                w="110px"
+                src="https://i.pcmag.com/imagery/reviews/03ma1UjS5TueJFtNVB4ElDn-8.fit_scale.size_1028x578.v1649255757.png"
+                alt="logo"
+              />
+            </Link>
           </Box>
           <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
             <Text>
@@ -64,7 +66,7 @@ export default function Navbar() {
           </HStack>
           <Flex gap="5" alignItems={"center"}>
             <Text>
-              <Link to="/login">{isAuth ? "Logout" : "Login"}</Link>
+              <Link to="/login">{isAuth?"Logout" :"Login"}</Link>
             </Text>
             <Button
               variant={"solid"}

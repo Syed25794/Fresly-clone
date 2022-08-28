@@ -14,18 +14,18 @@ import {
   Input,
   Text,
 } from "@chakra-ui/react";
-import {
-  Alert,
-  AlertIcon,
-} from "@chakra-ui/react";
+import { Alert, AlertIcon } from "@chakra-ui/react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 
 export const Login = () => {
   const isAuth = useSelector((state) => state.Auth.isAuth);
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [err, setErr] = useState("");
+  const [alertActive, setAlertActive] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -54,7 +54,7 @@ export const Login = () => {
     e.preventDefault();
 
     axios
-      .get("http://localhost:8080/users")
+      .get("https://punchy-car-5123.herokuapp.com/users")
       .then((res) => {
         dispatch({
           type: types.LOGIN_SUCCESS,
@@ -65,20 +65,29 @@ export const Login = () => {
       .catch((err) =>
         dispatch({ type: types.LOGIN_FAILURE, payload: err.message })
       );
+    if (alertActive) {
+      setAlertActive(false);
+    } else setAlertActive(true);
   };
   return (
     <Container maxWidth="100%">
+      <Navbar/>
       <Box w={["95%", "95%", "60%", "35%"]} m="auto" mt="5vh" h="50vh">
         <Heading fontSize="40px" fontWeight="500">
           Log in
         </Heading>
-        <Alert status={isAuth ? "success" : "warning"}>
-          <AlertIcon />
-          {isAuth ? "Successfully Logged in" : "Enter Details"}
-        </Alert>
+
+        {alertActive ? (
+          <Alert status={isAuth ? "success" : "warning"}>
+            <AlertIcon />
+            {isAuth ? "Successfully Logged in" : "Check your email or password"}
+          </Alert>
+        ) : null}
+       
         <form onSubmit={handleSubmit}>
           <FormLabel mb="0px">Email</FormLabel>
           <Input
+            type="email"
             placeholder="you@example.com"
             border="2px solid"
             borderColor="black"
@@ -90,6 +99,7 @@ export const Login = () => {
             Password
           </FormLabel>
           <Input
+            type="password"
             placeholder="enter password"
             border="2px solid"
             borderColor="black"
@@ -110,7 +120,6 @@ export const Login = () => {
             Login
           </Button>
         </form>
-
         <Flex
           mt="20px"
           justifyContent="space-between"
@@ -126,6 +135,7 @@ export const Login = () => {
           </Text>
         </Flex>
       </Box>
+      <Footer/>
     </Container>
   );
 };
